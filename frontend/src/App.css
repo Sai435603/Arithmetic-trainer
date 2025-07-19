@@ -1,0 +1,21 @@
+body, html, #root {
+  margin: 0;
+  height: 100%;
+  font-family: sans-serif;
+  background: linear-gradient(180deg, #2a0a4f, #3f1074);
+  color: #fff;
+}
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+header {
+  text-align: center;
+}
+.stats-panel {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem 0;
+}

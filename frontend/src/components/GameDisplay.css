@@ -1,0 +1,12 @@
+.game-display {
+  margin-top: 2rem;
+  text-align: center;
+}
+.game-display input {
+  padding: 0.5rem;
+  width: 6rem;
+  border-radius: 4px;
+  border: none;
+  text-align: center;
+  font-size: 1rem;
+}
