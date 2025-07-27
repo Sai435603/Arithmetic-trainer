@@ -9,13 +9,8 @@ body, html, #root {
   max-width: 900px;
   margin: 0 auto;
   padding: 2rem;
+  border: 1px solid white;
 }
 header {
   text-align: center;
-}
-.stats-panel {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  margin: 2rem 0;
 }

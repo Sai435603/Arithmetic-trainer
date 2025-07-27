@@ -1,0 +1,217 @@
+/* Ensure body and html elements take up the full height of the viewport */
+html, body {
+  height: 100%;
+  margin: 0;
+  width: 100%;
+}
+
+/* Gradient background on the body */
+#root {
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #6a11cb, #2575fc);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+/* Game container styling */
+.game-container {
+  max-width: 800px;  /* Increased width */
+  width: 100%;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 2rem;
+}
+.game-container:hover {
+  transform: scale(1.02);
+}
+
+.mode-select h2,
+.game-container h2,
+.game-container h3 {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.mode-select .btn,
+.game-container .btn {
+  display: block;
+  width: 80%;
+  margin: 1rem auto;
+  padding: 12px;
+  font-size: 1.2rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.mode-select .btn:hover,
+.game-container .btn:hover {
+  background-color: #0056b3;
+}
+
+.mode-select .btn.secondary,
+.game-container .btn.secondary {
+  background-color: #6c757d;
+}
+
+.mode-select .btn.secondary:hover,
+.game-container .btn.secondary:hover {
+  background-color: #555c63;
+}
+
+.question {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 1rem 0;
+  color: #6c757d;
+}
+
+.answer-input {
+  padding: 12px;
+  font-size: 1.2rem;
+  width: 60%;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.answer-input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.status {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.score-display {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #555c63;
+}
+
+.btn-group {
+  margin-top: 1.5rem;
+}
+
+.game-container h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1.2rem;
+}
+.game-container p {
+  color: #333;
+  margin-bottom: 1.2rem;
+}
+.game-container .btn-group button {
+  width: 40%;
+  display:flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+/* Customization container */
+.customization-container {
+  width: 100%;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+  text-align: left;
+}
+
+/* Customization styling */
+.customization {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  color: #333;
+}
+
+.customization h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.customization label {
+  display: block;
+  margin: 0.5rem 0;
+}
+
+.customization input[type="number"] {
+  width: 60%;
+  padding: 8px;
+  margin-top: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.customization input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+/* Styling for the operation section (displaying flex) */
+.customization .operation-options {
+  display: flex;
+  justify-content: space-between; /* Space out the options */
+  gap: 1rem;
+  flex-wrap: wrap; /* Allow wrapping if the screen size is small */
+}
+
+.customization .operation-options label {
+  display: flex;
+  align-items: center;
+}
+.select-options{
+   display: flex;
+   justify-content: space-evenly;
+}
+/* Ensure that the customization section looks good on small screens */
+@media (max-width: 600px) {
+  .game-container {
+    padding: 1rem;
+  }
+
+  .answer-input {
+    width: 80%;
+  }
+
+  .game-container .btn-group button {
+    width: 80%;
+    margin: 0.5rem 0;
+  }
+
+  .customization {
+    padding: 1rem;
+  }
+
+  .customization input[type="number"] {
+    width: 80%;
+  }
+
+  .customization-container {
+    padding: 1.5rem;
+  }
+
+  .customization .operation-options {
+    flex-direction: column; /* Stack the checkboxes on smaller screens */
+    align-items: flex-start;
+  }
+}
